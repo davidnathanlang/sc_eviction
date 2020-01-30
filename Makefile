@@ -1,8 +1,8 @@
 # Search path
-VPATH =
+VPATH = data data-raw eda reports scripts
 
 # Processed data files
-DATA =
+DATA =data-raw scripts
 
 # EDA studies
 EDA =

@@ -9,10 +9,10 @@ library(ussf)
 library(sf)
 names(df)
 # Parameters
-infile <- "./data-raw/cities.geojson"
-outfile <- "./data/cities.geojson.rds"
+infile <- here::here("data-raw/cities.geojson")
+outfile <- here::here("data/cities.geojson.rds")
 vars <- c("geoid", "n", "geometry")
-new_vars <- c("geoid", "city_name", "geometry")
+new_vars <- c(geoid = "geoid", city_name="n", geometry= "geometry")
 # ===============================================================================
 #* Creates a tibble with three columns: city ID, city name, and geometry.
 #* Renames any columns that require renaming.
@@ -20,7 +20,5 @@ new_vars <- c("geoid", "city_name", "geometry")
 #
 df <- sf::read_sf(infile) %>%
   clean_names() %>%
-  select(!!!vars)
-names(df) <- new_vars
-
-write_rds(df,outfile)
+  select(!!!new_vars) %>%
+  write_rds(df, outfile)

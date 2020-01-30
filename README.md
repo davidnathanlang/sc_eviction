@@ -1,10 +1,9 @@
-# Project 
+# Description
+This is an example project demonstrating proper workflows for data science.
+-All original data is stored in data raw.
+-Data is processed via the scripts in scripts folder.
+-Processed data is stored in the data folder.
+-Eda corresponds to exploratory data analysis.
 
-This a template for a data analysis project.
-
-* To create a repo that is a copy, log into GitHub and use the green _Use this template_ button.
-* To create a non-repo, local copy, use _Clone or download_ > _Download ZIP_.
-
-An explanation of how to use this project organization can be found in [Project workflow](https://dcl-workflow.stanford.edu/project-workflow.html).
-
-Here is an [example project](https://github.com/dcl-docs/project-example) based upon this template.
+# Author: David Lang
+# Version: 2020-01-29
