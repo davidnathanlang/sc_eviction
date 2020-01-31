@@ -1,0 +1,35 @@
+---
+title: C12 EDA
+author:  David Lang
+date: "`r Sys.Date()`"
+output: 
+  github_document:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r message=FALSE, warning=FALSE}
+# Libraries
+library(tidyverse)
+
+# Parameters
+
+infile <- here::here("data/joined.rds")
+#===============================================================================
+
+# Code
+```
+
+```{r}
+df <- read_rds(infile)
+
+summary(df$evictions)
+df %>% 
+  drop_na(evictions) %>%
+  top_n(1,evictions)
+
+```
+
