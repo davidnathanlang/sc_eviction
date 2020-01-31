@@ -8,6 +8,7 @@ library(tidyverse)
 library(ussf)
 library(sf)
 # Parameters
+
 city<-here::here("./data/cities.rds")
 geojson<-here::here("./data/cities.geojson.rds")
 #===============================================================================

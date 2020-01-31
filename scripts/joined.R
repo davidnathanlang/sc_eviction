@@ -8,9 +8,12 @@ library(tidyverse)
 library(ussf)
 library(sf)
 # Parameters
+
+#Data Directory
 city <- here::here("data/cities.rds")
 geojson <- here::here("data/cities.geojson.rds")
 outfile <- here::here("data/joined.rds")
+#Year
 year_cat <- 2016
 # ===============================================================================
 
